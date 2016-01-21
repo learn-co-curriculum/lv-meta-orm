@@ -1,0 +1,3 @@
+module Persistable
+
+end

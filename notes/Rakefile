@@ -1,0 +1,22 @@
+def reload!
+  load 'config/environment.rb'
+end
+
+task :console do
+  require_relative './config/environment'
+  Pry.start
+end
+
+task :create_post_table do 
+  require_relative './config/environment'
+  Post.create_table
+end
+
+task :insert_dummy_post do
+  require_relative './config/environment'
+  
+  post = Post.new
+  post.title = "Hello World" #=> @title = "Hello World"
+  post.content = "More content@!!!" 
+  post.save
+end

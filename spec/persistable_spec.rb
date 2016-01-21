@@ -1,0 +1,3 @@
+describe Persistable do
+
+end
